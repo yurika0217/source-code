@@ -1,0 +1,44 @@
+body{
+    font-size: 14px;
+}
+#open, #close{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    text-align: center;
+    padding: 14px 0;
+    margin: 16px auto;
+    cursor: pointer;
+}
+#mask{
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+#modal{
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    width: 300px;
+    transition: transform 0.4s;
+}
+#modal p{
+    margin: 0 0 20px;
+}
+#mask.hidden{
+    display: none;
+}
+#modal.hidden{
+    transform: translate(0, -500px);
+}
