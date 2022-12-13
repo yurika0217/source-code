@@ -1,0 +1,626 @@
+@charset "UTF-8";
+/* 共通部分 */
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.wrapper{
+    width: 1155px;
+    margin: 0 auto;
+}
+h2 {
+	font-size: 2rem;
+}
+/* トップ画面 */
+.line {
+	height: 32px;
+}
+.nav {
+	background: #F3F1E4;
+}
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	width: 895px;
+	line-height: 32px;
+	font-size: 1.2rem;
+}
+.main-nav a:hover {
+	text-decoration: underline;
+}
+.top {
+	background: #6E5F3C;
+	margin-bottom: 30px;
+}
+.top p {
+	color: rgb(245,204,39);
+	font-size: 1.6rem;
+	line-height: 32px;
+	text-align: center;
+}
+.main-text p{
+	font-size: 1.3rem;
+	margin-bottom: 55px;
+}
+.main-img {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.bookshelf {
+	background: #F8F7EF;
+	height: 540px;
+	margin-bottom: 55px;
+	padding: 40px 29px;
+}
+.bookshelf-item {
+	display: flex;
+	font-size: 1.6rem;
+}
+.bookshelf-item a:hover {
+	opacity: 0.7;
+}
+.bookshelf-item img {
+	display: block;
+	height: 155px;
+	margin: 15px 2px 0 2px;
+}
+.bookshelf-parts1 {
+	background: #B0A690;
+	width: 1070px;
+	height: 5px;
+	margin: 0 auto;
+}
+.bookshelf-parts2 {
+	background: #B0A690;
+	width: 1070px;
+	height: 4px;
+}
+.bookshelf-parts3 {
+	background: #B0A690;
+	width: 1070px;
+	height: 4px;
+}
+.category-title {
+	display: flex;
+	justify-content: space-between;
+	margin: 62px 0 37px 0;
+}
+.category-title p {
+	font-size: 1.6rem;
+}
+.category-title a {
+	font-size: 1.3rem;
+}
+.category-title a:hover {
+	text-decoration: underline;
+}
+.category-wrapper {
+	position:relative;
+	padding:0 3.5em 0 1.5em;
+	border-radius:0.5em;
+	max-width:1155px;
+}
+.items {
+	white-space:nowrap;
+	overflow-x:hidden;
+	margin: 0 0.1em 0 1em;
+	scroll-behavior: smooth;
+	scroll-snap-type:inline;
+	font-size: 13px;
+	overflow: hidden;
+	width: 100%;
+}
+.items img {
+	height: 200px;
+}
+.items a:hover {
+	opacity: 0.7;
+}
+.category-wrapper a {
+	display:inline-block;
+	margin:0 1em 0 0;
+	scroll-snap-align:center;
+	width: 160px;
+}
+.category-wrapper p {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.arrow {
+	display:inline-block;
+	position:absolute;
+	border-radius:50%;
+	width:47px;
+	height:47px;
+	cursor:pointer;
+	border:2px solid #0085CD;
+	background: rgba(255, 255, 255, 0.9);
+	vertical-align:middle;
+	margin-bottom:4px;
+	top:100px;
+}
+.left {
+	left:2px;
+}
+.right {
+	right:2px;
+}
+.arrow:before {
+	content:'';
+	position:absolute;
+	width:15px;
+	height:15px;
+	border-left:2px solid #0085CD;
+	border-bottom:2px solid #0085CD;
+}
+.left:before {
+	top:28%;
+	left:35%;
+	transform:rotate(45deg);
+}
+.right:before {
+	top:28%;
+	left:20%;
+	transform:rotate(-135deg);
+}
+.arrow:hover {
+	opacity: 0.8;
+}
+.arrow:hover:before {
+	opacity: 0.8;
+}
+.cart-btn {
+	width: 130px;
+	height: 50px;
+	border-radius:3px;
+	background: #F57F23;
+	color:#fff;
+	font-weight:normal;
+	border:none;
+	margin-top: 15px;
+}
+.out-stock-btn {
+	width: 130px;
+	height: 50px;
+	border-radius:3px;
+	background: #d5d5d5;
+	color:#fff;
+	font-weight:normal;
+	border:none;
+	margin-top: 15px;
+	text-align: center;
+}
+
+	/* category */
+	.bookshelfitem {
+		margin: 0 auto;
+		width: 700px;
+	}
+	.category{
+		margin-left: 150px;
+		font-size: 30px;
+	}
+	hr {
+		width: 1000px;
+	}
+	.catetitle {
+		margin-top: 40px;
+		padding-left: 100px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+	.catephoto {
+		display: flex;
+		float: left;
+		height: 280px;
+	}
+	
+	.cate {
+		clear: both;
+	}
+	.catetitle {
+		margin-left: 130px;
+	}
+	.cateprice {
+		margin-left: 230px;
+		font-size: 15px;
+	}
+	.cateaut {
+		margin-left: 230px;
+		font-size: 15px;
+
+	}
+	.catepub {
+		margin-left: 230px;
+		font-size: 15px;
+		
+	} 
+	.catedate{
+		margin-left: 230px;
+		font-size: 15px;
+		
+	}
+	.cate_in {
+		height: 300px;
+		margin-left: 200px;
+		padding-right: 150px;
+	}
+	.page-item {
+		font-size: 18px;
+		display: inline-block;
+		padding-right: 40px;
+	}
+	.pagination {
+		text-align: center;
+	}
+	.cartin {
+		margin-left: 400px;
+	}
+	/* search.php */
+	.image {
+		position: relative;
+		float:left;
+	}
+	.right {
+		margin-left: 30px;
+	}
+	.titl {
+		font-weight: bold;
+		font-size: 30px;
+		margin-top: 10px;
+	}
+	.sewrapper {
+		display: flex;
+		margin: 0 auto;
+		width: 950px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.seimg {
+		height: 400px;
+	}
+	.text{
+		margin-top: 15px;
+		font-size: 15px;
+	}
+	.pri {
+		margin-top: 15px;
+		font-size: 15px;
+	}
+	.is {
+		font-size: 15px;
+		margin-top: 15px;
+		
+	}
+	.aut {
+		font-size: 15px;
+	}
+	.secart {
+		margin-top: 10px;
+		padding-bottom: 5px;
+	}
+	.nocart {
+		font-size: 30px;
+		margin-left: 20px;
+	}
+	/* ログイン画面 */
+	.logintitle {
+		margin-left: 30px;
+		font-size: 30px;
+	}
+	.loginbody {
+		margin-left: 200px;
+		padding-top: 20px;
+		width: 700px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		background-color: #f8f3ec;
+	}
+	.loginpass {
+		font-size: 25px;
+		margin-left: 100px;
+	}
+	.logbottom {
+		font-size: 50px;
+		margin-bottom: 30px;
+		margin-left: 500px;
+		border-radius : 5%;
+		padding       : 20px 20px;
+		background    : #000066; 
+		color         : #ffffff;
+		transition    : .3s;
+		box-shadow    : 6px 6px 3px #666666;
+		border        : 2px solid #000066;
+		cursor        : pointer;
+		font-size: 100%;
+	}
+	.logtext {
+		width: 300px;
+		height: 40px;
+	}
+	/* カート */
+	.cartimg {
+		display: flex;
+		float: left;
+		margin-left: 100px;
+	}
+	.cartwrapper {
+		width: 1000px;
+		margin-left: 150px;
+	}
+	.carttitle {
+		font-weight: bold;
+		font-size: 30px;
+		margin-right: 50px;
+	}
+	.cartbody {
+		margin-left: 450px;
+	}
+	.cartaut {
+		font-size: 20px;
+	}
+	.cartpub{
+		font-size: 15px;
+	}
+	.cartdate {
+		font-size: 15px;
+	}
+	.cartmess {
+		font-size: 15px;
+	}
+	.cartprice {
+		font-size: 20px;
+	}
+	.cartdetail {
+		text-align: right;
+		margin-right: 180px;
+		font-size: 20px;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/* mypage */
+	.content {
+		position: relative;
+		margin: 10px auto;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+		max-width: 500px;
+		padding: 30px;
+		border-radius: 5px;
+		font-size: 15px;
+	}
+	.control {
+		margin-bottom: 3em;
+	}
+	.logcontrol{
+		margin-bottom: 5px;
+	}
+	.required {
+		margin-left: .3em;
+		color: #f33;
+		font-size: .9em;
+		padding: 3px;
+		background-color: #fee;
+		font-weight: bold;
+		margin-bottom: 3em;
+	}
+	.mywrapper {
+		color: #2b546a;
+		background-color: #fafafa;
+		font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+	}
+	.new {
+		color: red;
+		margin-left: 150px;
+		font-size: 15px;
+	}
+	.searchresult {
+		margin-left: 120px;
+		font-size: 30px;
+		
+	}
+
+	/* 購入画面 */
+	td,th {
+		padding-bottom: 20px;
+	}
+	.contentbuy {
+		margin: 10px auto;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+		padding: 30px;
+		border-radius: 5px;
+		font-size: 15px;
+	}
+	/* 購入完了画面 */
+	.com {
+		text-align: center;
+		font-size: 50px;
+	}
+	.comtop{
+		text-align: center;
+		font-size: 30px;
+	}
+	/* ログアウト */
+.logout-container {
+	margin: 95px 0 250px 0;
+	text-align: center;
+}
+.logout-container p {
+	font-size: 16px;
+	margin: 20px 0;
+}
+.logout-container a {
+	font-size: 16px;
+	color: #0085CD;
+	margin: 5px 0;
+}
+.logout-container a:hover{
+	opacity: 0.7;
+}
+/* オススメページcss */
+.osusume {
+	scroll-behavior: smooth;
+	scroll-snap-type:inline;
+	font-size: 14px;
+}
+
+.osusume p {
+	margin: 1em 5em 1em 5em;
+	text-align:center;
+	background: #d7e7f0;
+	font-size: 18px;
+
+}
+.osusume img {
+	margin: 1em 1.5em 2em 7em;
+	width: 150px;
+	float: left;
+}
+
+.osicona h2{
+	margin: 1em 0.1em 0 0;
+}
+
+.ositext {
+	margin-right: 7em;
+	overflow-x:hidden;
+	font-size:13px;
+}
+.osisyousai{
+	text-align:right;
+
+}
+.clear{
+	clear:both
+}
+/* ヘッダー */
+.header {
+	display: flex;
+	background: #F3F1E4;
+}
+.header-container {
+	display: flex;
+}
+.header-logo {
+	margin-top: 15px;
+}
+.header-logo:hover {
+	opacity: 0.7;
+}
+.search-form{
+	margin: 53px 0 0 30px;
+}
+.search-box{
+	border: #bbbbb2;
+	outline:0;
+	height:40px;
+	width:430px;
+	padding:0 10px;
+	border-radius:3px 0 0 3px;
+	background:#fff;
+	font-size: 13px;
+}
+.search-btn{
+	width:57px;
+	height:42px;
+	border-radius:0 3px 3px 0;
+	background:#0085CD;
+	border:none;
+	color:#fff;
+	font-weight:normal;
+	font-size:13px;
+}
+.search-btn:hover{
+	opacity: 0.8;
+}
+.header-cart-btn {
+	width: 120px;
+	text-align: center;
+	font-size: 13px;
+	margin: 40px 0 0 40px;
+}
+.header-mypage-btn{
+	width: 80px;
+	text-align: center;
+	font-size: 13px;
+	margin: 40px 0 0 0;
+}
+.header-new-member {
+	width: 124px;
+	height: 38px;
+	border-radius:3px;
+	background: #F25371;
+	color:#fff;
+	font-weight:normal;
+	border:none;
+	margin: 40px 10px 0 40px;
+}
+.header-new-member:hover {
+	opacity: 0.8;
+}
+.header-log-in {
+	width: 84px;
+	height: 38px;
+	border-radius:3px;
+	background:#0085CD;
+	color:#fff;
+	font-weight:normal;
+	border:none;
+	margin-top: 40px;
+}
+.header-log-in:hover {
+	opacity: 0.8;
+}
+.header-log-out {
+	width: 124px;
+	height: 38px;
+	border-radius:3px;
+	background: #F25371;
+	color:#fff;
+	font-weight:normal;
+	border:none;
+	margin: 40px 10px 0 80px;
+}
+.header-log-out:hover {
+	opacity: 0.8;
+}
+
+/* footer */
+.footerbottom{
+    text-align:center;
+
+}
+.footer{
+	font-size:13px;
+}
+#page-top {
+	margin:2em 2em;
+	display:block;
+	font-weight: bold;
+    padding: .7em;
+    text-align: center;
+	color: #0085CD;
+	background: rgba(255, 255, 255, 0.9);
+	transition: .3s;
+}
+#page-top:hover {
+    background: #0085CD; /*背景色*/
+    color:rgba(255, 255, 255, 0.9);
+}
+/* footer終了 */
